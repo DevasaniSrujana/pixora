@@ -143,7 +143,7 @@ const CollectionPage = () => {
           </div>
         ) : (
           <div className="flex w-full justify-start gap-5 overflow-auto mt-10 pl-6 pr-6 flex-wrap">
-            {items.map((item) => (
+            {Array.isArray(items) && items.map((item) => (
               <CollectionCard key={item.id} item={item} />
             ))}
           </div>
